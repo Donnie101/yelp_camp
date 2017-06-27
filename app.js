@@ -18,7 +18,7 @@ const flash = require('connect-flash');
 mongoose.Promise = global.Promise;
 
 //mongoose.connect('mongodb://localhost/yelp_camp',{ useMongoClient: true });
-mongoose.connect('mongodb://TheDude:HeyNow@ds139352.mlab.com:39352/yelpcampthedudeversion',{ useMongoClient: true });
+mongoose.connect('mongodb://TheDude:HeyNow@ds139352.mlab.com:39352/yelpcampthedudeversion');
 
 
 app.use(bodyParser.urlencoded({extended:true}));
