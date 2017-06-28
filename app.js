@@ -16,7 +16,7 @@ const flash = require('connect-flash');
 
 
 mongoose.Promise = global.Promise;
-console.log("HERE IS THE URL"+process.env.DATABASEURL);
+console.log("HERE IS THE URL "+process.env.DATABASEURL);
 mongoose.connect(process.env.DATABASEURL,{ useMongoClient: true });
 //mongoose.connect('mongodb://TheDude:HeyNow@ds139352.mlab.com:39352/yelpcampthedudeversion');
 
