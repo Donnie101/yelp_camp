@@ -16,9 +16,9 @@ const flash = require('connect-flash');
 
 
 mongoose.Promise = global.Promise;
-
-//mongoose.connect('mongodb://localhost/yelp_camp',{ useMongoClient: true });
-mongoose.connect('mongodb://TheDude:HeyNow@ds139352.mlab.com:39352/yelpcampthedudeversion');
+console.log("HERE IS THE URL"+process.env.DATABASEURL);
+mongoose.connect(process.env.DATABASEURL,{ useMongoClient: true });
+//mongoose.connect('mongodb://TheDude:HeyNow@ds139352.mlab.com:39352/yelpcampthedudeversion');
 
 
 app.use(bodyParser.urlencoded({extended:true}));
@@ -28,7 +28,7 @@ app.use(methodOverride('_method'));
 app.use(flash());
 
 //seedDb();
-console.log(this);
+
 //PASSWORD CONFIGURATION
 app.use(require('express-session')({
   secret:'You nibbas think you are better than me.',
@@ -58,5 +58,5 @@ app.use("/campgrounds",campgroundRoutes);
 
 //process.env.PORT,process.env.IP
 app.listen(process.env.PORT||3000,process.env.IP,function(){
-  console.log('HEY NOW YOU ARE AN ALL STAR');
+  console.log('SERVER IS LISTENING');
 });
