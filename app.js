@@ -28,7 +28,7 @@ app.use(methodOverride('_method'));
 app.use(flash());
 
 //seedDb();
-alert('YOU ARE A PUSSY');
+prompt('HOW OLD ARE YOU?');
 //PASSWORD CONFIGURATION
 app.use(require('express-session')({
   secret:'You nibbas think you are better than me.',
